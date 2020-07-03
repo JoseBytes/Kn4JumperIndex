@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Kn4</title>
+    <meta 	name="viewport" content="width=device-width, initial-scale=1">
+    <meta 	charset="utf-8"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+	<link 	rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+  <style>
+	
+
+	</style>
+</head>
+<body>
+
+<div class="ui small inverted fixed menu">
+  <a class="launch item">
+      <i class="content icon"></i>
+    </a>
+ <div class="title item">
+        <b>Kn4</b> Jumper <div class="ui blue mini label">v1.0</div>
+ </div>
+  
+</div>
+	
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <form  class="ui large form" id="login-form" onsubmit="return login();">
+      <div class="ui secondary raised segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user secret icon"></i>
+            <input type="email" id="login-email" required="" placeholder="Usuario">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" id="login-password" required="" placeholder="*********">
+          </div>
+        </div>
+        <button class="ui small fluid teal submit button">Entrar</button>
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+
+ 
+     <div class="ui fluid black animated fade button" tabindex="0">
+	  <div class="visible content">Registrarse</div>
+	  <div class="hidden content">
+		Registro deshabilitado
+	  </div>
+</div>
+
+  </div>
+</div>
+
+
+<style>
+
+
+	body{
+	  background-color: #f1f1f1;
+	}
+    body > .grid {
+      height: 100%;
+    }
+    .image {
+      margin-top: -100px;
+    }
+    .column {
+      max-width: 350px;
+    }
+</style>
+<script src="assets/js/login.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document)
+    .ready(function() {
+      $('.ui.form')
+        .form({
+          fields: {
+            email: {
+              identifier  : 'email',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your e-mail'
+                },
+                {
+                  type   : 'email',
+                  prompt : 'Please enter a valid e-mail'
+                }
+              ]
+            },
+            password: {
+              identifier  : 'password',
+              rules: [
+                {
+                  type   : 'empty',
+                  prompt : 'Please enter your password'
+                },
+                {
+                  type   : 'length[6]',
+                  prompt : 'Your password must be at least 6 characters'
+                }
+              ]
+            }
+          }
+        })
+      ;
+    })
+  ;
+</script>
+
+</body>
+</html>
